@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block body %}
 
 <div class="container">
   <form
@@ -8,18 +8,24 @@
     enctype="multipart/form-data"
   >
     {% csrf_token %}
-    <div class="form-group row">
-      <div class="col-md-10 grid-margin stretch-card">
+    <div class="form-group">
+      <div class="grid-margin stretch-card">
         <div class="card">
-          <div class="card-body ml-5">
+          <div class="card-body">
             <br /><br />
-            <h4 class="card-title">Add Model</h4>
+            <h1 class="card-title" style="font-size: 27px">Add Model</h1>
             <br /><br />
 
             <div class="form-group row">
-              <label for="" class="col-sm-3 col-form-label">Model Name</label>
-              <div class="col-sm-6">
+              <label
+                for=""
+                class="col-sm-3 col-form-label"
+                style="font-size: 20px"
+                >Model Name</label
+              >
+              <div class="col-md-8">
                 <input
+                  autocomplete="off"
                   type="text"
                   class="form-control"
                   placeholder="modelname"
@@ -29,8 +35,13 @@
             </div>
 
             <div class="form-group row">
-              <label for="" class="col-sm-3 col-form-label">Description</label>
-              <div class="col-sm-6">
+              <label
+                for=""
+                class="col-sm-3 col-form-label"
+                style="font-size: 20px"
+                >Description</label
+              >
+              <div class="col-md-8">
                 <textarea
                   class="form-control"
                   rows="4"
@@ -41,17 +52,25 @@
             </div>
 
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Upload .gib model</label>
-              <div class="col-sm-6">
-                <input type="file" name="gib" />
+              <label class="col-sm-3 col-form-label" style="font-size: 20px"
+                >Upload .gib model</label
+              >
+              <div class="col-md-8">
+                <input type="file" autocomplete="off" name="gib" />
               </div>
             </div>
 
             <div class="form-group row">
-              <label for="" class="col-sm-3 col-form-label">Price</label>
-              <div class="col-sm-6">
+              <label
+                for=""
+                class="col-sm-3 col-form-label"
+                style="font-size: 20px"
+                >Price</label
+              >
+              <div class="col-md-8">
                 <input
                   type="text"
+                  autocomplete="off"
                   class="form-control"
                   id="exampleInputPassword2"
                   placeholder="price"
@@ -61,10 +80,16 @@
             </div>
 
             <div class="form-group row">
-              <label for="" class="col-sm-3 col-form-label">Type</label>
-              <div class="col-sm-6">
+              <label
+                for=""
+                class="col-sm-3 col-form-label"
+                style="font-size: 20px"
+                >Type</label
+              >
+              <div class="col-md-8">
                 <input
                   type="text"
+                  autocomplete="off"
                   class="form-control w-100"
                   id=""
                   placeholder="type"
@@ -75,13 +100,17 @@
 
             <div class="form-group row">
               <div class="col-md-3">
-                <label class="form-check-label" for="inlineRadio1"
+                <label
+                  class="form-check-label"
+                  for="inlineRadio1"
+                  style="font-size: 20px"
                   >Model Format</label
                 >
               </div>
               <div class="form-check-inline">
                 <div class="col-md-4">
                   <input
+                    autocomplete="off"
                     class="form-check-input"
                     type="radio"
                     name="format"
@@ -94,6 +123,7 @@
               <div class="form-check-inline">
                 <div class="col-md-4">
                   <input
+                    autocomplete="off"
                     class="form-check-input"
                     type="radio"
                     name="format"
@@ -106,6 +136,7 @@
               <div class="form-check-inline">
                 <div class="col-md-4">
                   <input
+                    autocomplete="off"
                     class="form-check-input"
                     type="radio"
                     name="format"
@@ -119,13 +150,17 @@
 
             <div class="form-group row">
               <div class="col-md-3">
-                <label class="form-check-label" for="inlineRadio1"
+                <label
+                  class="form-check-label"
+                  for="inlineRadio1"
+                  style="font-size: 20px"
                   >Model Type</label
                 >
               </div>
               <div class="form-check-inline">
                 <div class="col-md-3">
                   <input
+                    autocomplete="off"
                     class="form-check-input"
                     type="radio"
                     name="modeltype"
@@ -133,11 +168,17 @@
                     value="option2"
                   />
                 </div>
-                <label class="form-check-label" for="inlineRadio2">Free</label>
+                <label
+                  class="form-check-label"
+                  for="inlineRadio2"
+                  style="font-size: 20px"
+                  >Free</label
+                >
               </div>
               <div class="form-check-inline">
                 <div class="col-sm-3">
                   <input
+                    autocomplete="off"
                     class="form-check-input"
                     type="radio"
                     name="modeltype"
@@ -145,35 +186,59 @@
                     value="option3"
                   />
                 </div>
-                <label class="form-check-label" for="inlineRadio3">Paid</label>
+                <label
+                  class="form-check-label"
+                  for="inlineRadio3"
+                  style="font-size: 20px"
+                  >Paid</label
+                >
               </div>
             </div>
 
+            <!-- <div class="form-group row">
+                            <div class="col-sm-3">
+                                <label class="form-check-label" for="inlineRadio2">Category</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <select class="form-select w-100" id="" aria-label="Default select example" name="category">
+                                    <option selected>Car</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div> -->
             <div class="form-group row">
               <div class="col-sm-3">
-                <label class="form-check-label" for="inlineRadio2"
+                <label
+                  class="form-check-label"
+                  for="inlineRadio2"
+                  style="font-size: 20px"
                   >Category</label
                 >
               </div>
               <div class="col-sm-6">
                 <select
+                  autocomplete="off"
                   class="form-select w-100"
-                  id=""
+                  id="inlineRadio2"
                   aria-label="Default select example"
                   name="category"
                 >
-                  <option selected>Car</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="">--select--</option>
+                  {% for i in var %}
+                  <option value="{{i.cat_id}}">{{i.category_name}}</option>
+                  {% endfor %}
                 </select>
               </div>
             </div>
 
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Upload .fbx model</label>
+              <label class="col-sm-3 col-form-label" style="font-size: 20px"
+                >Upload .fbx model</label
+              >
               <div class="col-sm-6">
-                <input type="file" name="fbx" />
+                <input type="file" autocomplete="off" name="fbx" />
               </div>
             </div>
 
@@ -189,6 +254,6 @@
         </div>
       </div>
     </div>
-    {% endblock%}
   </form>
 </div>
+{% endblock%}
